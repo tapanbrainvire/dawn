@@ -1,0 +1,129 @@
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+<style>
+/* The tpmodal (background) */
+.tpmodal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* tpmodal Content */
+.tpmodal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+}
+
+/* The tpclose Button */
+.tpclose {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.tpclose:hover,
+.tpclose:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+</style>
+
+{% comment %}
+
+<h2>tpmodal Example</h2>
+
+<!-- Trigger/Open The tpmodal -->
+<button id="myBtn">Open tpmodal</button>
+
+{% endcomment %}
+<!-- The tpmodal -->
+<div id="mytpmodal" class="tpmodal">
+
+  <!-- tpmodal content -->
+  <div class="tpmodal-content">
+    <span class="tpclose">&times;</span>
+    
+    <div id="quick-view-modal">
+        <div class="modal-content" id="quick-view-content">
+        </div>
+    </div>
+  </div>
+
+</div>
+
+
+<script>
+var tpmodal = document.getElementById("mytpmodal");
+var span = document.getElementsByClassName("tpclose")[0];
+span.onclick = function() {
+  tpmodal.style.display = "none";
+}
+window.onclick = function(event) {
+  if (event.target == tpmodal) {
+    tpmodal.style.display = "none";
+  }
+}
+</script>
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+ 
+<script>
+$(document).ready(function () {
+    $('.quick-view-btn').on('click', function (event) {
+        event.preventDefault();
+        var productId = $(this).data('product-id');
+        $.ajax({
+            url: '/products/' + productId + '.js',
+            dataType: 'json',
+            success: function (data) {
+             //   console.log('data',data)
+                displayQuickView(data);
+            },
+            error: function (error) {
+                console.error('Error fetching product data:', error);
+            }
+        });
+    });
+
+    function displayQuickView(product) {
+        var modalContent = $('#quick-view-content');
+        modalContent.html('<h2>' + product.title + '</h2><p>' + product.description + '</p><div class="slider"></div>'); // Add more details as needed
+        $.each( product.images, function( key, value ) {
+          $('.slider').append('<img src=' + value + '>');
+        });
+
+        setTimeout(() => {
+          slickCarousel();
+        }, "50");
+        
+        $('#mytpmodal').show();
+    }
+
+    function slickCarousel() {
+      $('.slider').slick({
+          autoplay: true,
+          autoplaySpeed: 2000,
+          dots: true,
+          prevArrow: false,
+          nextArrow: false
+      });
+    }
+   
+});
+</script>
