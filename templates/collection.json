@@ -57,5 +57,6 @@
     "product-grid",
     "1702625660607dfd8b",
     "17026245334638bd5e"
-  ]
+  ],
+  "wrapper": ".boost-sd__product-filter-fallback"
 }
