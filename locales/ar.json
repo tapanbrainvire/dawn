@@ -497,6 +497,296 @@
         "thank_you_confirmed_order_with_email_payment": "لقد دفعت مقابل طلبك %{date}.",
         "thank_you_confirmed_order_with_phone_payment": "لقد دفعت مقابل طلبك %{date}."
       }
+    },
+    "errors": {
+      "invalid_start_date_or_issue_number_for_debit": "مطلوب تاريخ بدء أو رقم إصدار صالح",
+      "invalid_expiry_year": "لا تحتوي على سنة انتهاء صالحة",
+      "reset_password_html": "عنوان البريد الإلكتروني هذا مرتبط بالفعل بحساب. إذا كان هذا الحساب ملكك، فيمكنك <a href=\"/account/login#recover\">إعادة تعيين كلمة المرور الخاصة بك</a>",
+      "verify_email": "لقد أرسلنا إليك بريدًا إلكترونيًا على %{customer_email}، يرجى النقر على الرابط المقدم للتحقق من عنوان بريدك الإلكتروني.",
+      "blocked_address": "هذا الموقع غير معتمد",
+      "product_not_available": "لم يتم نشر المنتج لهذا العميل.",
+      "shop_404": {
+        "title": "أنشئ موقعًا للتجارة الإلكترونية وقم بالبيع عبر الإنترنت! برامج التجارة الإلكترونية من Shopify",
+        "heros": {
+          "store_unavailable": "عذرا، هذا المتجر غير متوفر حاليا.",
+          "store_not_exist": "هذا المتجر غير موجود.",
+          "no_storefront": "هذا المتجر ليس لديه موقع على شبكة الانترنت حتى الآن."
+        },
+        "links": {
+          "explore_other_stores": "اكتشف متجرًا آخر",
+          "start_free_trial": "ابدأ تجربة مجانية"
+        },
+        "owner_ctas": {
+          "header": "هل أنت صاحب متجر؟",
+          "fix_domain": "لإكمال إعداد عنوان الويب الجديد، انتقل إلى %{domain_settings_link}. انقر على \"اتصال المجال\" وانتقل إلى: %{domain}.<br> إذا كنت تواجه مشكلة في الانتقال إلى متجرك، فجرّب صفحة %{forgot_your_store_link}.",
+          "fix_domain_link_text": "إعدادات المجال الخاص بك",
+          "forgot_your_store_link_text": "نسيت متجرك",
+          "add_storefront": "يمكنك إعداد موقع الويب الخاص بك عن طريق إضافة قناة المتجر عبر الإنترنت إلى %{admin_link}. إذا كنت تواجه مشكلة في الانتقال إلى متجرك، فجرّب صفحة %{forgot_your_store_link}.",
+          "admin_link_text": "مسؤول"
+        },
+        "ctas": {
+          "sell_in_person": {
+            "header": "بيع شخصيا",
+            "caption": "احصل على الميزات التي تحتاجها لتشغيل متجر البيع بالتجزئة الخاص بك سواء كنت تبدأ مشروعك التجاري أو تنميه.",
+            "link_text": "ابدأ النسخة التجريبية المجانية"
+          },
+          "open_a_store": {
+            "header": "افتح متجر شوبيفاي جديد",
+            "caption": "ابدأ فترة تجريبية مجانية مدتها 3 أيام، ثم استمر بدفع 1 دولار شهريًا للأشهر الثلاثة القادمة.",
+            "link_text": "سجل الآن"
+          },
+          "editions": {
+            "header": "عرض إصدارات Shopify",
+            "caption": "مع أكثر من 100 تحديث للمنتج، يمكنك أن تكون أكثر إنتاجية وإبداعًا وأكثر قوة في العمل مما كنت تتخيله.",
+            "link_text": "استكشاف الإصدار الأخير"
+          },
+          "store_owner": {
+            "header": "هل أنت صاحب متجر؟",
+            "caption": "هل تواجه صعوبة في الوصول إلى متجرك؟ جرّب ميزة %{forgot_your_store_link}. إذا كنت ترغب في إعادة تنشيط متجرك، فاتصل بـ %{shopify_support_link}.",
+            "shopify_support_link_text": "دعم شوبيفاي"
+          }
+        }
+      }
+    },
+    "notices": {
+      "customer": {
+        "password_reset_error": "خطأ في إعادة تعيين كلمة المرور",
+        "no_account_found": "لم يتم العثور على حساب مع هذا البريد الإلكتروني.",
+        "invalid_credentials": "البريد الإلكتروني أو كلمة المرور غير صحيحة.",
+        "denylisted_reset_password": "تعذر الوصول إلى حسابك لأن كلمة المرور الحالية غير آمنة. سوف تتلقى رسالة بريد إلكتروني لتحديث كلمة المرور الخاصة بك.",
+        "signup_disabled": "تم إيقاف إنشاء الحساب للعميل."
+      },
+      "address": {
+        "updated": "تم تحديث العنوان بنجاح.",
+        "error_updating": "حدث خطأ أثناء تحديث العنوان",
+        "created": "تم إنشاء العنوان بنجاح",
+        "error_creating": "حدث خطأ أثناء إنشاء العنوان.",
+        "deleted": "تمت إزالة العنوان بنجاح",
+        "error_deleting": "حدث خطأ أثناء حذف العنوان."
+      },
+      "order": {
+        "not_available": "الطلب غير متوفر",
+        "financial_status": {
+          "authorized": "معتمد",
+          "pending": "قيد الانتظار",
+          "paid": "تم الدفع",
+          "unpaid": "غير مدفوعة الأجر",
+          "voided": "أصبح صفراً",
+          "partially_paid": "مدفوعة جزئيا",
+          "partially_refunded": "تم استرداد جزء من المبلغ",
+          "refunded": "تم رد الرسوم",
+          "expired": "انتهى التاريخ"
+        },
+        "fulfillment_status": {
+          "fulfilled": "مكتمل",
+          "complete": "ممتلىء",
+          "partial": "جزئي",
+          "unfulfilled": "لم يتم الوفاء بها",
+          "restocked": "تضاف إلى المخزون مرة أخرى"
+        },
+        "transaction_status": {
+          "success": "نجاح",
+          "pending": "قيد الانتظار",
+          "failure": "فشل",
+          "error": "خطأ"
+        },
+        "cancel_reason": {
+          "declined": "تم رفض الدفع",
+          "inventory": "العناصر غير متوفرة",
+          "fraud": "أمر احتيالي",
+          "customer": "تغيير/إلغاء الطلب الخاص بالعميل",
+          "other": "آخر",
+          "staff": "خطأ الموظفين"
+        },
+        "cash_on_delivery": "الدفع النقدي عند التسليم (COD)"
+      },
+      "cart": {
+        "only_n_items_available": "يمكنك فقط إضافة %{count} %{name} إلى سلة التسوق.",
+        "too_many_items_in_cart": "لا يمكنك إضافة المزيد من %{name} إلى سلة التسوق.",
+        "all_items_in_cart": "جميع %{count} %{name} موجودة في سلة التسوق الخاصة بك.",
+        "empty_update": "لا يمكن تحديث سلة التسوق الفارغة",
+        "missing_parameters": "لا يوجد معرف صالح أو معلمات سطر",
+        "generic_error": "خطأ في العربة",
+        "too_many_line_items_error": "لا يمكن أن يكون لديك أكثر من %{max} من العناصر في سلة التسوق الخاصة بك.",
+        "link_expired": "انتهت صلاحية الرابط",
+        "link_no_longer_exists": "الرابط لم يعد موجودا.",
+        "stock_problems_html": "واحد أو أكثر من العناصر لم تعد متوفرة. لقد قدمنا <a href=\"%{link}\">​​عربة محدثة</a> .",
+        "changed": "عربة التغيير",
+        "items_changed": "تم تغيير عنصر واحد أو أكثر.",
+        "product_sold_out": "لقد تم بيع المنتج '%{name}' بالفعل.",
+        "variant_not_found": "لا يمكن العثور على البديل",
+        "variant_requires_selling_plan": "لا يمكن شراء المتغير إلا من خلال خطة المبيعات.",
+        "shipping_address_not_required": "هذه العربة لا تتطلب الشحن",
+        "shipping_address_invalid": "حدثت مشكلة أثناء حساب أسعار الشحن. استمر في الخروج لتحديد سعر الشحن قبل إكمال طلبك.",
+        "selling_plan_not_applicable": "لا يمكن تطبيق خطة البيع على البديل",
+        "selling_plan_not_available_for_company_locations": "الشراء لمرة واحدة متاح فقط لطلبات B2B",
+        "digital_product_not_available_for_company_locations": "لا يمكن إضافة هذا العنصر إلى طلبات B2B",
+        "product_not_available": "المنتج غير متوفر",
+        "less_than_minimum": "يحتوي هذا العنصر على %{min} على الأقل.",
+        "more_than_maximum": "الحد الأقصى لهذا العنصر هو %{max}.",
+        "not_respect_step": "لا يمكنك إضافة هذا العنصر إلا بترتيب تصاعدي قدره %{step}.",
+        "bundle_requires_components": "لا يمكن إضافة منتج الحزمة '%{name}' إلى سلة التسوق.",
+        "gift_card_with_components_not_supported": "لا يمكن إضافة منتج الحزمة '%{name}' إلى سلة التسوق.",
+        "view_lines_limit_reached": "يجب أن يحتوي على أقل من %{limit} من الأسطر",
+        "merchandise_line_transformers": {
+          "run_error": "حدث خطأ في سلة التسوق الخاصة بك."
+        },
+        "gift_card_price_must_be_greater_than_zero": "لا يمكن إضافة منتج الحزمة '%{name}' إلى سلة التسوق."
+      },
+      "storefront": {
+        "invalid_password": "كلمة المرور غير صحيحة، يرجى المحاولة مرة أخرى."
+      },
+      "tags": {
+        "add_articles": "ابحث فقط عن العناصر التي تحتوي على هذه العلامة %{tag}",
+        "add_products": "ابحث فقط عن المنتجات التي تحمل هذه العلامة %{tag}",
+        "remove_articles": "ابحث أيضًا عن الأشياء التي لم يتم وضع علامة %{tag} عليها"
+      }
+    }
+  },
+  "customer_accounts": {
+    "account_information": {
+      "loading_finished_accessibility_message": "تم تحميل معلومات الحساب",
+      "profile_card": {
+        "cancel": "يلغي",
+        "cancel_accessibility_label": "إلغاء تحرير الملف الشخصي",
+        "edit": "يحرر",
+        "edit_accessibility_label": "تحرير الملف الشخصي",
+        "email_help_text": "لا يمكن تغيير البريد الإلكتروني المستخدم لتسجيل الدخول",
+        "first_name": "اسم",
+        "last_name": "اسم العائلة",
+        "phone_number_help_text": "لا يمكن تغيير رقم الهاتف المستخدم لتسجيل الدخول",
+        "save": "يحفظ",
+        "save_accessibility_label": "حفظ الملف الشخصي",
+        "title": "حساب تعريفي",
+        "no_name_provided_accessibility_label": "لم تتم إضافة أي اسم"
+      },
+      "profile_update_confirmation_message": "تم تحديث الملف الشخصي",
+      "title": "حساب تعريفي",
+      "people": {
+        "pagination": {
+          "load_more": "تحميل المزيد",
+          "load_more_accessibility_label": "تحميل المزيد من الناس",
+          "loading_accessibility_label": "يتم تحميل الناس"
+        }
+      },
+      "add_button": "يضيف"
+    },
+    "orders": {
+      "list_layout_accessibility_label": "خيارات الدفع",
+      "list_title": "طلب",
+      "order_list": {
+        "column_headers": {
+          "total": "المجموع",
+          "items": "غرض",
+          "order": "طلب"
+        },
+        "delivered": "تم التسليم {{date}}",
+        "empty_state_order_source_description": "فقط الطلبات المقدمة حتى {{email}} ستكون مرئية هنا.",
+        "empty_state_subtitle": "قم بزيارة المتجر لتقديم الطلب.",
+        "empty_state_title": "لا يوجد أمر حتى الآن",
+        "estimated_delivery": "المتوقع {{date}}",
+        "items": {
+          "one": "{{count}} عنصر",
+          "other": "{{count}} عنصر"
+        },
+        "list_view": "عرض عرض القائمة",
+        "order_link": "عرض الطلب {{name}}",
+        "order_number": "طلب {{name}}",
+        "orders_title": "مؤكد",
+        "pagination": {
+          "nav_accessibility_label": "زر التنقل للطلب",
+          "next": "التالي",
+          "next_accessibility_label": "الطلب التالي",
+          "previous": "سابق",
+          "previous_accessibility_label": "النظام الأخير",
+          "load_more": "تحميل المزيد",
+          "load_more_accessibility_label": "وتحميل الطلبات"
+        },
+        "sort_by": "{{option}} :فرز",
+        "sort_hide_options_accessibility_label": "إخفاء خيارات الفرز للطلبات المؤكدة.",
+        "sort_show_options_accessibility_label": "إظهار خيارات الفرز للطلبات المؤكدة.",
+        "sort_title": "فرز",
+        "sort": {
+          "date": {
+            "newest": "الأحدث إلى الأقدم",
+            "oldest": "الأقدم إلى الأحدث"
+          },
+          "location": {
+            "ascending": "الموقع (من الألف إلى الياء)",
+            "descending": "الموقع (ZA)"
+          },
+          "order_number": {
+            "ascending": "رقم الطلب (من الأقل إلى الأعلى)",
+            "descending": "رقم الطلب (من الأعلى إلى الأقل)"
+          },
+          "order_total": {
+            "ascending": "إجمالي الطلبات (من الأقل إلى الأعلى)",
+            "descending": "إجمالي الطلبات (من الأعلى إلى الأقل)"
+          }
+        },
+        "table_view": "عرض عرض الجدول",
+        "one_images_accessibility_label": "يتضمن الطلب {{lineItemName1}}",
+        "two_images_accessibility_label": "يحتوي الطلب {{lineItemName1}} ، {{lineItemName2}}",
+        "three_images_accessibility_label": "تتضمن الطلبات {{lineItemName1}} ، {{lineItemName2}} ، {{lineItemName3}}",
+        "four_images_accessibility_label": "تتضمن الطلبات {{lineItemName1}} ، {{lineItemName2}} ، {{lineItemName3}} ، {{lineItemName4}}",
+        "no_filtered_results_description": "قم بإزالة المرشحات أو تعديلها لعرض طلباتك",
+        "no_filtered_results_title": "لم يتم العثور على نتائج",
+        "estimated_shortform": "يقدر {{date}}",
+        "payment_status": {
+          "list_view": {
+            "overdue": "لقد مر تاريخ استحقاق الدفع",
+            "due": "تاريخ استحقاق الدفع {{date}}",
+            "due_today": "الدفع مستحق اليوم",
+            "due_without_date": "الدفع مستحق",
+            "due_on_fulfillment": "الدفع مستحق عند الوفاء",
+            "pay_to_confirm": "ادفع للتأكيد",
+            "payment_not_due": "الدفع لم يحين موعده بعد"
+          },
+          "table_view": {
+            "overdue": "لقد انقضى الموعد النهائي",
+            "due": "تاريخ الدفع {{date}}",
+            "due_today": "المقرر اليوم",
+            "paid": "تم الدفع",
+            "due_without_date": "المتأخرات",
+            "due_on_fulfillment": "المستحقة على الوفاء",
+            "pay_to_confirm": "ادفع للتأكيد",
+            "payment_not_due": "لم يحين موعده بعد"
+          }
+        },
+        "sort_currently_sorted_by_accessibility_label": "الترتيب حاليًا حسب: {{option}}",
+        "carousel": {
+          "one_products_accessibility_label": "يحتوي الطلب على كمية {{lineItemName1}} من {{lineItemQuantity1}}",
+          "two_products_accessibility_label": "يحتوي الطلب على كمية {{lineItemName1}} من {{lineItemQuantity1}} ، كمية {{ {{lineItemName2}} من {{lineItemQuantity2}}",
+          "three_products_accessibility_label": "يحتوي الطلب على كمية {{lineItemName1}} {{lineItemQuantity1}} من {{lineItemName2}} {{lineItemQuantity2}} من {{lineItemName3}} {{lineItemQuantity3}}",
+          "four_products_accessibility_label": "يحتوي الطلب على {{lineItemName1}} {{lineItemQuantity1}} كمية من {{lineItemName2}} ، {{lineItemQuantity2}} كمية من {{lineItemName3}} ، {{lineItemQuantity3}} كمية من {{lineItemName3}}، {{lineItemQuantity4}} كمية متضمنة",
+          "five_products_accessibility_label": "يحتوي الطلب على كمية {{lineItemName1}} {{lineItemQuantity1}} من كمية {{lineItemName2}} ، كمية {{lineItemQuantity2 {{lineItemQuantity2}} من {{lineItemQuantity3}} {{lineItemName3}} ، كمية {{lineItemQuantity3}} من {{lineItemQuantity4}} كمية، بما في ذلك {{lineItemQuantity5}} {{lineItemName5}} }",
+          "six_products_accessibility_label": "يحتوي الطلب على {{lineItemName1}} {{lineItemQuantity1}} كمية من {{lineItemName2}} ، كمية {{ {{lineItemQuantity2}} من {{lineItemName3}} ، {{lineItemQuantity3}} كمية من {{lineItemName3}}، كمية {{lineItemQuantity4}} كمية، {{lineItemName5}} {{lineItemQuantity5}} }}، {{lineItemName6}} كمية من {{lineItemQuantity6}}",
+          "six_and_more_products_accessibility_label": "يحتوي الطلب على كمية {{lineItemName1}} {{lineItemQuantity1}} من كمية {{lineItemName2}} {{lineItemQuantity2}} من {{lineItemQuantity3}} {{lineItemName3}} ، كمية {{lineItemQuantity3}} من {{lineItemQuantity4}} كمية، {{lineItemName5}} {{lineItemQuantity5}} } {{lineItemName6}} }} كمية {{lineItemQuantity6}} وأكثر",
+          "view_order_details": "عرض تفاصيل الطلب",
+          "previous": "سابق",
+          "next": "التالي"
+        },
+        "show_order_actions_accessibility_label": "إظهار إجراءات الطلب للطلب {{name}}",
+        "empty_state_title_for_pending_orders": "لا توجد أوامر معلقة",
+        "more_than_four_products_accessibility_label": "يحتوي الطلب على {{lineItemName1}} {{lineItemName2}} و {{lineItemName3}} و {{numberOfAdditionalProducts}} والمنتجات",
+        "plus_more_products": "+ {{numberOfAdditionalProducts}} منتج",
+        "order_status_message": {
+          "list_view": {
+            "view_order_for_details": "عرض الطلب لمزيد من التفاصيل",
+            "estimated_delivery": "المتوقع {{date}}",
+            "last_updated": "تاريخ آخر تحديث {{date}}"
+          },
+          "table_view": {
+            "estimated_delivery": "آنو. {{date}}"
+          }
+        },
+        "more_than_three_products_accessibility_label": "يحتوي الطلب على {{lineItemName1}} و {{lineItemName2}} و {{numberOfAdditionalProducts}} من المنتجات و",
+        "plus_more": "+ {{numberOfAdditionalProducts}}",
+        "filter_title": "فلتر",
+        "filter": {
+          "clear_section": "حذف القسم"
+        }
+      }
     }
   }
 }
