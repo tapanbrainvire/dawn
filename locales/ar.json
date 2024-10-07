@@ -787,6 +787,296 @@
           "clear_section": "حذف القسم"
         }
       }
+    },
+    "B2B": {
+      "draft_order_details": {
+        "payment_status": {
+          "pending": {
+            "title": "الدفع مستحق",
+            "title_with_date": "تاريخ استحقاق الدفع {{date}}",
+            "description_overdue": "الدفع الخاص بك متأخر.",
+            "description_partially_paid": "تم دفع ثمن هذا الطلب جزئيًا. لديك الرصيد المتبقي.",
+            "description_authorized": "سيتم خصم الرسوم من طريقة الدفع الخاصة بك في تاريخ الاستحقاق أو يمكنك الدفع الآن.",
+            "title_due_on_receipt": "الدفع لم يحين موعده بعد",
+            "description_due_on_receipt": "سوف تتلقى فاتورة عندما يحين موعد الدفع.",
+            "title_due_on_fulfillment": "الدفع مستحق عند الوفاء",
+            "description_due_on_fulfillment": "سيكون الدفع مستحقًا بمجرد استيفاء جميع العناصر المدرجة في هذا الطلب.",
+            "description_waiting_for_manual_payment": "الدفع لهذا الطلب معلق. سيتم تحديث الرصيد بمجرد استلام الدفع.",
+            "description_due_on_receipt_partially_paid": "تم دفع ثمن هذا الطلب جزئيًا. لديك الرصيد المتبقي. سوف تتلقى فاتورة عندما يحين موعد الدفع.",
+            "description_due_on_fulfillment_partially_paid": "تم دفع ثمن هذا الطلب جزئيًا. لديك الرصيد المتبقي. سيكون الدفع مستحقًا بمجرد استيفاء جميع العناصر المدرجة في هذا الطلب."
+          },
+          "refund": {
+            "title": "ردها",
+            "title_with_date": "تم إرجاع {{date}}",
+            "description_full_refund": "لقد تلقيت استردادًا كاملاً لهذا الطلب.",
+            "description_single_refund": "لقد تلقيت استردادًا جزئيًا لهذا الطلب.",
+            "description_multiple_refunds": "لقد تلقيت استردادًا جزئيًا لهذا الطلب."
+          },
+          "canceled": {
+            "title": "تم إلغاء الدفع",
+            "description": "لم يتم محاسبتك."
+          },
+          "pay_now_accessibility_label": "ادفع الآن مقابل الطلب {{orderName}}"
+        },
+        "subtitle": "تم الإرسال في {{date}}",
+        "title": "طلب {{name}}",
+        "order_timeline": {
+          "expand_events_label": "إظهار التفاصيل",
+          "expand_events_accessibility_label": "عرض تفاصيل مسودة الطلب",
+          "hide_events_label": "إخفاء الوصف",
+          "hide_events_accessibility_label": "إخفاء تفاصيل مسودة الطلب"
+        }
+      },
+      "payment_methods": {
+        "payment_delete": {
+          "description_without_replacement": "لن تكون طريقة الدفع هذه متاحة لعمليات الشراء المستقبلية من هذا الموقع.",
+          "description_with_replacement": "ستؤثر إزالة طريقة الدفع هذه على المدفوعات المصرح بها بالفعل لهذا الموقع. قم بتغيير طريقة الدفع هذه إلى طريقة أخرى لتلقي الطلبات القادمة."
+        },
+        "payment_details": {
+          "order_label": "طلب {{name}}",
+          "draft_label": "مسودة الأمر {{name}}"
+        }
+      },
+      "purchase_order_number": {
+        "add_accessibility_label": "أضف رقم طلب الشراء",
+        "add_modal_title": "أضف رقم طلب الشراء",
+        "cancel": "يلغي",
+        "close_modal_accessibility_label": "إغلاق رقم طلب الشراء المشروط",
+        "discard": "يترك",
+        "discard_changes_modal_title": "هل تريد تجاهل التغييرات؟",
+        "edit_accessibility_label": "تعديل رقم أمر الشراء",
+        "edit_modal_title": "تعديل رقم أمر الشراء",
+        "empty_state": "لا يوجد رقم أمر الشراء",
+        "modal_po_number_input_label": "رقم أمر الشراء",
+        "modal_po_number_input_max_length_error": "يمكن أن تحتوي أرقام أوامر الشراء على {{maxLength}} من الأحرف كحد أقصى.",
+        "save": "يحفظ",
+        "title": "رقم الطلب {{poNumber}}"
+      }
+    },
+    "errors": {
+      "address_deletion_error": {
+        "description": "حدثت مشكلة أثناء حذف هذا العنوان. يرجى المحاولة مرة أخرى أو تحديث الصفحة."
+      },
+      "addresses_loading_issue": {
+        "description": "خطأ في الاتصال. تحقق من اتصال الشبكة وحاول مرة أخرى."
+      },
+      "banner_title": {
+        "one": "هناك خطأ {{count}}",
+        "other": "هناك العديد من الأخطاء {{count}}"
+      },
+      "failed_address_creation": {
+        "description": "حدثت مشكلة أثناء حذف هذا العنوان. حاول تحديث هذه الصفحة أو التحقق من اتصالك بالإنترنت."
+      },
+      "failed_address_update": {
+        "description": "حدثت مشكلة أثناء حذف هذا العنوان. حاول تحديث هذه الصفحة أو التحقق من اتصالك بالإنترنت."
+      },
+      "no_access_to_locations": {
+        "description": "ليس لديك حق الوصول إلى أي مكان"
+      },
+      "not_found": {
+        "description": "تحقق من عنوان URL أو حاول مرة أخرى خلال بضع دقائق.",
+        "title": "هناك مشكلة في تحميل هذه الصفحة"
+      },
+      "order_not_found": {
+        "description": "إما أن هذا الطلب غير موجود أو ليس لديك الإذن بمشاهدته.",
+        "title": "لم يتم استلام الطلب"
+      },
+      "profile_update_error": {
+        "description": "حدثت مشكلة أثناء تحديث ملفك الشخصي. حاول تحديث هذه الصفحة أو التحقق من اتصالك بالإنترنت."
+      },
+      "retry_action_label": "حاول مرة أخرى",
+      "load_orders_error": {
+        "title": "غير قادر على تحميل الطلب",
+        "description": "حاول مرة أخرى أو عد لاحقًا.",
+        "retry_button": "حاول مرة أخرى"
+      },
+      "load_paypal_error": {
+        "description": "حدثت مشكلة أثناء تحميل PayPal. يرجى المحاولة مرة أخرى."
+      },
+      "load_extension_error": {
+        "title": "خطأ",
+        "description": "قم بتحديث هذه الصفحة أو حاول مرة أخرى خلال بضع دقائق.",
+        "refresh_button": "تحديث الصفحة"
+      },
+      "logout_everywhere": {
+        "description": "حدث خطأ ما أثناء تسجيل الخروج. يرجى المحاولة مرة أخرى."
+      }
+    },
+    "shop_policies": {
+      "legal_notice": "إشعار قانوني",
+      "privacy_policy": "سياسة الخصوصية",
+      "refund_policy": "سياسة استرداد الأموال",
+      "shipping_policy": "سياسة الشحن",
+      "subscription_policy": "سياسة العضوية",
+      "terms_of_sale": "شروط البيع",
+      "terms_of_service": "شروط الخدمة"
+    },
+    "payment_methods": {
+      "title": "طرق الدفع",
+      "add_payment_method_button": "أضف طريقة الدفع",
+      "payment_details": {
+        "title": "معلومات كاملة عن طرق الدفع",
+        "payment_method_expiring_on": "تنتهي في {{expiryDate}}",
+        "preauthorized_payments": "الدفع المصدق مسبقًا",
+        "close_payment_modal": "إيقاف",
+        "close_payment_modal_accessibility_label": "إغلاق تفاصيل طريقة الدفع المشروطة",
+        "payment_method_not_found_error": "غير قادر على العثور على طريقة الدفع",
+        "payment_details_loading": "جارٍ تحميل معلومات طريقة الدفع الكاملة",
+        "pre_authorized_payments": "الدفع المصرح به مسبقا",
+        "total_amount_of_subscription_line_items_left": "و {{total}} أكثر",
+        "total_amount_of_subscription_line_items_left_accessibility_label": "إجمالي العناصر {{totalItems}} ، العناصر المراد عرضها {{totalItemsToDisplay}} .",
+        "next_payment_due": "الدفعة التالية مستحقة في {{dueDateInMonthDayYear}}",
+        "edit_payment_method_button": "يحرر",
+        "edit_payment_method_button_accessibility_label": "تعديل طريقة الدفع التي تنتهي بـ {{lastDigits}}",
+        "credit_card_details_accessibility_label": "تنتهي بـ {{lastDigits}}",
+        "billing_title": "عنوان إرسال الفواتير",
+        "card_info_title": "معلومات البطاقة",
+        "payment_method_expired_on": "تنتهي في {{expiryDate}}",
+        "loading_shop_pay": "تحميل متجر الدفع",
+        "invalid_payment_method": "طريقة الدفع غير صالحة",
+        "invalid_payment_method_message": "استخدم بطاقة ائتمان جديدة لمواكبة الطلبات القادمة.",
+        "replace_payment_method": "تغيير طريقة الدفع",
+        "checkout_card_banner": "لا يمكن استخدام طريقة الدفع هذه إلا للمدفوعات المصرح بها مسبقًا. إذا قمت بتسجيل الدخول إلى هذا المتجر، فلن يظهر أثناء الخروج.",
+        "default_checkbox": "تعيين كافتراضي",
+        "default_checkbox_accessibility_label": "قم بتعيين طريقة الدفع هذه كطريقة افتراضية"
+      },
+      "delete_payment_method_button": "يمسح",
+      "delete_payment_method_button_accessibility_label": "حذف {{paymentMethodName}}",
+      "back_button": "عُد",
+      "back_button_accessibility_label": "ارجع إلى {{paymentMethodStepTitle}}",
+      "generic_card": "بطاقة",
+      "payment_delete": {
+        "title": "إزالة طريقة الدفع",
+        "description_without_replacement": "لن تكون طريقة الدفع هذه متاحة لعمليات الشراء المستقبلية.",
+        "description_with_replacement": "سيؤثر حذف طريقة الدفع هذه على المدفوعات المعتمدة مسبقًا. يمكنك استبدال طريقة الدفع هذه ببديل آخر لتلقي الطلبات القادمة.",
+        "payment_method_selector_placeholder": "حدد طريقة دفع بديلة (اختياري)",
+        "replace_method_with_new_method_description": "سيتم حذف {{currentPaymentMethodName}} واستبداله بـ {{newPaymentMethodName}} .",
+        "error_when_deleting": "عذرًا، حدث خطأ ما ولم نتمكن من إزالة طريقة الدفع هذه. يرجى المحاولة مرة أخرى لاحقًا أو تحديث الصفحة.",
+        "delete_and_replace_button": "حذف واستبدال",
+        "delete_and_replace_button_accessibility_label": "قم بإزالة {{currentPaymentMethodName}} واستبدله بـ {{newPaymentMethodName}} .",
+        "deleted_successfully": "تمت إزالة طريقة الدفع بنجاح.",
+        "payment_method_selector_no_alternative_payment": "لا توجد طريقة للتغيير",
+        "loading_available_payment_methods_accessibility_label": "جارٍ تحميل طرق الدفع المتاحة",
+        "warning_message_with_replacement": {
+          "with_pending_orders_and_subscriptions": "سيؤثر حذف طريقة الدفع هذه على المدفوعات المعتمدة مسبقًا. سيتم تحصيل أي رصيد مستحق على طلب موجود من خلال طريقة الدفع هذه ما لم تختر طريقة دفع أخرى. من خلال اختيار طريقة دفع أخرى، ستستمر في تلقي طلبات الاشتراك القادمة دون أي متاعب.",
+          "with_pending_orders": "سيؤدي حذف طريقة الدفع هذه إلى إزالتها من حسابك ولن تكون متاحة لعمليات الشراء المستقبلية. سيتم تحميل هذا المبلغ على أي رصيد مستحق على طلب موجود ما لم تختر طريقة دفع أخرى.",
+          "with_subscriptions": "سيؤثر حذف طريقة الدفع هذه على المدفوعات المعتمدة مسبقًا. قم بتغيير طريقة الدفع هذه إلى طريقة أخرى لتلقي الطلبات القادمة."
+        },
+        "warning_message_without_replacement": {
+          "with_pending_orders_and_subscriptions": "سيؤثر حذف طريقة الدفع هذه على المدفوعات المعتمدة مسبقًا. سيتم فرض رسوم على طريقة الدفع هذه فقط مقابل أي رصيد مستحق على الطلبات الحالية ولكنك لن تتلقى طلبات الاشتراك المستقبلية. أضف طريقة دفع أخرى لمواصلة تلقي طلبات الاشتراك.",
+          "with_pending_orders": "سيؤدي حذف طريقة الدفع هذه إلى إزالتها من حسابك ولن تكون متاحة لعمليات الشراء المستقبلية. سيتم خصم هذا فقط مقابل أي رصيد مستحق على الطلبات الحالية.",
+          "with_subscriptions": "سيؤثر حذف طريقة الدفع هذه على المدفوعات المعتمدة مسبقًا. أضف طريقة دفع أخرى لتتبع الطلبات القادمة."
+        }
+      },
+      "edit_payment_method": {
+        "title": "تعديل طريقة الدفع",
+        "save_payment_method_button": "يحفظ",
+        "cancel_edit_payment_method_button": "يلغي",
+        "payment_method_updated_toast": "تم تحديث طريقة الدفع",
+        "billing_address": "عنوان إرسال الفواتير",
+        "billing_address_add_new": "إضافة جديد",
+        "billing_address_choose_from_list": "اختر من القائمة",
+        "future_purchases_notice": "سيتم حفظ طريقة الدفع هذه لعمليات الشراء المستقبلية.",
+        "generic_error": "حدثت مشكلة أثناء التحديث. يرجى المحاولة مرة أخرى."
+      },
+      "card_fields": {
+        "card_number_label": "رقم البطاقة",
+        "card_number_placeholder": "رقم البطاقة",
+        "name_on_card_label": "الاسم على البطاقة",
+        "name_on_card_placeholder": "الاسم على البطاقة",
+        "card_expiry_label": "تاريخ انتهاء الصلاحية (شهر/سنة)",
+        "card_expiry_placeholder": "تاريخ انتهاء الصلاحية (شهر/سنة)",
+        "card_verification_value_label": "رمز الأمان",
+        "card_verification_value_placeholder": "رمز الأمان",
+        "card_start_label": "تاريخ الإصدار (شهر/سنة)",
+        "card_start_placeholder": "تاريخ الإصدار (شهر/سنة)",
+        "tooltip": {
+          "tooltip_accessibility_label": "مزيد من المعلومات",
+          "card_verification_value_explanation_amex": "رمز الحماية المكون من 4 أرقام الموجود على مقدمة بطاقتك",
+          "card_verification_value_explanation_other": "رمز آمن مكون من 3 أرقام موجود على ظهر بطاقتك",
+          "card_verification_value_explanation": "عادةً ما يكون رمز الأمان المكون من 3 أرقام موجودًا على ظهر بطاقتك. تحتوي بطاقات أمريكان إكسبريس على رمز مكون من 4 أرقام في المقدمة.",
+          "card_security_notice": "جميع المعاملات آمنة ومشفرة."
+        },
+        "field_errors": {
+          "credit_card_name_invalid": "أدخل اسمك تمامًا كما يظهر على بطاقتك",
+          "credit_card_number_invalid": "أدخل رقم بطاقة صالح",
+          "credit_card_expiry_invalid": "أدخل تاريخ انتهاء صالح للبطاقة",
+          "credit_card_verification_value_blank": "أدخل رمز CVV أو رمز الأمان الخاص ببطاقتك"
+        }
+      },
+      "add_payment_method": {
+        "title": "أضف طريقة الدفع",
+        "payment_method_added_confirmation": "تمت إضافة طريقة الدفع",
+        "billing_address": {
+          "title": "عنوان إرسال الفواتير",
+          "add_billing_address_button": "إضافة جديد",
+          "add_billing_address_button_accessibility_label": "أضف عنوان إرسال الفواتير الجديد",
+          "choose_billing_address_from_list_button": "اختر من القائمة",
+          "choose_billing_address_from_list_button_accessibility_label": "حدد عنوان إرسال الفواتير من القائمة",
+          "missing_billing_address_error_message": "يرجى تقديم عنوان إرسال الفواتير",
+          "default_checkbox": "قم بتعيين طريقة الدفع كطريقة افتراضية"
+        }
+      },
+      "expires_soon": "هذه البطاقة على وشك الانتهاء قريبا",
+      "expired": "انتهت صلاحية هذه البطاقة",
+      "card_update_consent": "سيتم حفظ طريقة الدفع هذه لعمليات الشراء المستقبلية.",
+      "digital_wallet_title": "المحفظة الرقمية",
+      "credit_or_debit_card_title": "بطاقة الائتمان أو الخصم",
+      "google_pay": {
+        "errors": {
+          "generic": "حدثت مشكلة في Google Pay. حاول مرة أخرى أو استخدم طريقة دفع مختلفة.",
+          "missing_billing_address": "مطلوب عنوان إرسال الفواتير لـ Google Pay. يرجى ربط عنوان واحد بحسابك."
+        },
+        "loading": "جارٍ تحميل Google Pay"
+      },
+      "apple_pay": {
+        "loading": "جارٍ تحميل خدمة Apple Pay",
+        "errors": {
+          "generic": "حدثت مشكلة في Apple Pay. حاول مرة أخرى أو استخدم طريقة دفع مختلفة.",
+          "not_available": "خدمة Apple Pay غير متوفرة على هذا الجهاز.",
+          "missing_billing_address": "مطلوب عنوان إرسال الفواتير لـ Apple Pay. يرجى ربط عنوان واحد بحسابك."
+        }
+      },
+      "add_payment_method_banner": "وأضف طريقة دفع للدفع بشكل أسرع أو للخدمات المعتمدة مسبقًا",
+      "edit_payment_method_button_accessibility_label": "تعديل {{paymentMethodName}} الذي ينتهي بـ {{lastDigits}}",
+      "edit_payment_method_brand_button_accessibility_label": "{{paymentMethodName}} تعديل",
+      "expiration_warning_button_accessibility_label": "إظهار تحذير انتهاء الصلاحية لـ {{paymentMethodName}} المنتهي بـ {{lastDigits}}",
+      "no_payment_methods_banner": "لم تتم إضافة أي طرق دفع",
+      "default": "تقصير",
+      "store_credit": {
+        "label": "تخزين الائتمان",
+        "accesibility_label": "رصيد المتجر - {{formattedBalance}}",
+        "expirable_amounts_button": "عرض مبلغ انتهاء الصلاحية",
+        "details_modal": {
+          "title": "رصيد المتجر الذي قد تنتهي صلاحيته",
+          "balance_label": "توازن",
+          "expiration_date_label": "تاريخ انتهاء الصلاحية",
+          "amount_label": "كمية",
+          "expirable_balance_info": "ستنتهي صلاحية جزء من رصيدك في التاريخ التالي",
+          "expirable_amount_label": "المبلغ الإجمالي الذي يمكن أن تنتهي صلاحيته",
+          "expirable_amounts_info": "يتم تطبيق المبلغ الذي ستنتهي صلاحيته قريبًا أولاً عند الخروج",
+          "expired_amounts_button": "عرض المبلغ منتهية الصلاحية",
+          "pagination": {
+            "load_more_label": "تحميل المزيد",
+            "load_more_accessibility_label": "تحميل المزيد من المبالغ منتهية الصلاحية"
+          },
+          "date_label": "تاريخ",
+          "expirable_amounts_button": "يرى"
+        },
+        "expirable_amounts_label": "مبلغ انتهاء الصلاحية"
+      }
+    },
+    "payment_method_brands": {
+      "visa": "فيزا",
+      "mastercard": "ماستر كارد",
+      "shoppay": "متجر الدفع",
+      "applepay": "أبل الدفع",
+      "googlepay": "جوجل الدفع",
+      "paypal": "باي بال",
+      "americanexpress": "أمريكان إكسبريس",
+      "discover": "يكتشف",
+      "dinersclub": "نادي داينرز",
+      "jcb": "جي سي بي"
     }
   }
 }
