@@ -24,7 +24,7 @@
     <div class="tp-filter-option-tags">
       <h3>Filter by Tags</h3>
       <ul>
-        {% assign tags = collections['collection-handle'].all_tags %}
+        {% assign tags = collections[collection.handle].all_tags %}
         {% for tag in tags %}
           <li>
             <label>
