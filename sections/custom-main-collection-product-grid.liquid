@@ -47,7 +47,7 @@
 
 <script>
   function fetchProductsByCollection(collectionHandle) {
-    const apiUrl = '/collections/'+{{ collection.handle }} +'/products.json';
+    const apiUrl = '/collections/{{ collection.handle }}/products.json';
 
     // Make AJAX request to fetch products
     fetch(apiUrl)
