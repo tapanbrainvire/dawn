@@ -19,6 +19,10 @@
 </style>
 
 <div class="tp-custom-collection-container">
+  <div id="product-list"></div>
+
+
+  {% comment %}
   {% for product in collections[collection.handle].products %}
   <div class="product-item">
     <img src="{{ product.featured_image | img_url: 'master' }}" />
@@ -27,7 +31,9 @@
     <a href="{{ product.url }}">View Product</a>
   </div>
 {% endfor %}
+  {% endcomment %}
 
+  
 </div>
 
 {% schema %}
@@ -38,3 +44,43 @@
   ]
 }
 {% endschema %}
+
+<script>
+  // Function to fetch products from a specific collection
+  function fetchProductsByCollection(collectionHandle) {
+    const apiUrl = `/collections/${collectionHandle}/products.json`;
+
+    // Make AJAX request to fetch products
+    fetch(apiUrl)
+      .then(response => response.json())
+      .then(data => {
+        const products = data.products;
+        displayProducts(products);
+      })
+      .catch(error => {
+        console.error('Error fetching products:', error);
+      });
+  }
+
+  // Function to display products on the page
+  function displayProducts(products) {
+    const productContainer = document.getElementById('product-list');
+    productContainer.innerHTML = ''; // Clear previous products
+
+    products.forEach(product => {
+      const productHTML = `
+        <div class="product-item">
+          <img src="${product.images[0].src}" alt="${product.title}" />
+          <h2>${product.title}</h2>
+          <p>${product.variants[0].price}</p>
+          <a href="/products/${product.handle}">View Product</a>
+        </div>
+      `;
+      productContainer.innerHTML += productHTML;
+    });
+  }
+
+  // Call the function with your desired collection handle
+  fetchProductsByCollection('your-collection-handle'); // Replace with your collection handle
+</script>
+
