@@ -32,7 +32,7 @@
     <!-- Filter by Tags -->
     <div class="tp-filter-option-tags">
       <h3>Filter by Tags</h3>
-      <ul>
+      <ul id="product-tag-filter">
         {% assign tags = collections[collection.handle].all_tags %}
         {% for tag in tags %}
           <li>
@@ -108,4 +108,31 @@
 
   // Call the function with your desired collection handle
   fetchProductsByCollection(); // Replace with your collection handle
+
+
+   // Event listener for the dropdown change
+  document.getElementById('product-tag-filter').addEventListener('change', function() {
+    const selectedTag = this.value;
+    if (selectedTag) {
+      fetchProductsByTag(selectedTag); // Call the function with selected tag
+    } else {
+      document.getElementById('product-list').innerHTML = ''; // Clear products if no tag selected
+    }
+  });
+
+  // Function to fetch products based on selected tag
+  function fetchProductsByTag(selectedTag) {
+    const apiUrl = `/products.json?tag=${selectedTag}`; // Fetch products based on the selected tag
+
+    // Make AJAX request to fetch products based on the selected tag
+    fetch(apiUrl)
+      .then(response => response.json())
+      .then(data => {
+        const products = data.products;
+        displayProducts(products);
+      })
+      .catch(error => {
+        console.error('Error fetching products:', error);
+      });
+  }
 </script>
