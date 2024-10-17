@@ -46,9 +46,8 @@
 {% endschema %}
 
 <script>
-  // Function to fetch products from a specific collection
   function fetchProductsByCollection(collectionHandle) {
-    const apiUrl = `/collections/${collectionHandle}/products.json`;
+    const apiUrl = '/collections/'+{{ collection.handle }} +'/products.json';
 
     // Make AJAX request to fetch products
     fetch(apiUrl)
@@ -83,4 +82,3 @@
   // Call the function with your desired collection handle
   fetchProductsByCollection('your-collection-handle'); // Replace with your collection handle
 </script>
-
