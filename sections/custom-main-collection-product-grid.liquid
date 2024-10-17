@@ -1,5 +1,12 @@
 <div class="tp-custom-collection-container">
-  Hello
+  {% for product in collections['collection-handle'].products %}
+  <div class="product-item">
+    <h2>{{ product.title }}</h2>
+    <p>{{ product.price | money }}</p>
+    <a href="{{ product.url }}">View Product</a>
+  </div>
+{% endfor %}
+
 </div>
 
 {% schema %}
