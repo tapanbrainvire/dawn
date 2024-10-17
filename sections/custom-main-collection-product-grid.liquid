@@ -123,8 +123,8 @@
   });
 
   // Function to fetch products based on selected tag
-  function fetchProductsByTags(selectedTag) {
-    const apiUrl = `/products.json?tag=${selectedTag}`; // Fetch products based on the selected tag
+  function fetchProductsByTags(selectedTags) {
+    const apiUrl = `/products.json?tag=${selectedTags}`; // Fetch products based on the selected tag
 
     // Make AJAX request to fetch products based on the selected tag
     fetch(apiUrl)
