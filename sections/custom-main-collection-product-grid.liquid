@@ -110,15 +110,16 @@
   fetchProductsByCollection(); // Replace with your collection handle
 
 
-   // Event listener for the dropdown change
-  document.getElementById('product-tag-filter').addEventListener('change', function() {
-    const selectedTag = this.value;
-    console.log('select tag',selectedTag);
-    if (selectedTag) {
-      fetchProductsByTag(selectedTag); // Call the function with selected tag
-    } else {
-      document.getElementById('product-list').innerHTML = ''; // Clear products if no tag selected
-    }
+    // Event listener for checkbox changes
+  document.querySelectorAll('.filter-tag').forEach(checkbox => {
+    checkbox.addEventListener('change', function() {
+      const selectedTags = Array.from(document.querySelectorAll('.filter-tag:checked')).map(input => input.value);
+      if (selectedTags.length > 0) {
+        fetchProductsByTags(selectedTags); // Call the function with selected tags
+      } else {
+        document.getElementById('product-list').innerHTML = ''; // Clear products if no tags are selected
+      }
+    });
   });
 
   // Function to fetch products based on selected tag
