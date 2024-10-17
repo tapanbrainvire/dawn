@@ -132,6 +132,7 @@
       .then(response => response.json())
       .then(data => {
         const products = data.products;
+        console.log('products',products);
         displayProducts(products);
       })
       .catch(error => {
