@@ -1,3 +1,13 @@
+<style>
+  .tp-custom-collection-container{
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 10%;
+    justify-content: center;
+    align-items: center;
+}
+</style>
+
 <div class="tp-custom-collection-container">
   {% for product in collections[collection.handle].products %}
   <div class="product-item">
