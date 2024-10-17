@@ -6,11 +6,15 @@
     justify-content: center;
     align-items: center;
 }
+  .product-item {
+    width: 22%;
+}
 </style>
 
 <div class="tp-custom-collection-container">
   {% for product in collections[collection.handle].products %}
   <div class="product-item">
+    <img src="{{ product.featured_image | img_url: 'master' }}" />
     <h2>{{ product.title }}</h2>
     <p>{{ product.price | money }}</p>
     <a href="{{ product.url }}">View Product</a>
