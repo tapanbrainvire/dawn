@@ -143,6 +143,7 @@
     fetch(window.Shopify.routes.root + "search/suggest.json?q="+selectedTags+"&resources[type]=product&resources[options][fields]=tag")
       .then((response) => response.json())
       .then((suggestions) => {
+        console.log('suggestions',suggestions);
         const productSuggestions = suggestions.resources.results.products;
         console.log('products',productSuggestions);
         if (productSuggestions.length > 0) {
