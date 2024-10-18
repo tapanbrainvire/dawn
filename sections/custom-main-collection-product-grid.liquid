@@ -131,6 +131,7 @@
     fetch(apiUrl)
       .then(response => response.json())
       .then(data => {
+        console.log('response');
         const products = data.products;
         console.log('products',products);
         displayProducts(products);
