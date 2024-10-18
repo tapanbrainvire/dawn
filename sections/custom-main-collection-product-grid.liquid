@@ -124,7 +124,8 @@
 
   // Function to fetch products based on selected tag
   function fetchProductsByTags(selectedTags) {
-    const apiUrl = '/collections/{{ collection.handle }}/products.json?tag='+selectedTags; // Fetch products based on the selected tag
+    //const apiUrl = '/collections/{{ collection.handle }}/products.json?tag='+selectedTags; // Fetch products based on the selected tag
+    const apiUrl = '/collections/{{ collection.handle }}/'+selectedTags;
     console.log('url',apiUrl);
 
     // Make AJAX request to fetch products based on the selected tag
