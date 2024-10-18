@@ -125,20 +125,33 @@
   // Function to fetch products based on selected tag
   function fetchProductsByTags(selectedTags) {
     //const apiUrl = '/collections/{{ collection.handle }}/products.json?tag='+selectedTags; // Fetch products based on the selected tag
-    const apiUrl = '/collections/{{ collection.handle }}/'+selectedTags;
-    console.log('url',apiUrl);
+    // const apiUrl = '/collections/{{ collection.handle }}/'+selectedTags;
+    // console.log('url',apiUrl);
 
-    // Make AJAX request to fetch products based on the selected tag
-    fetch(apiUrl)
-      .then(response => response.json())
-      .then(data => {
+    // // Make AJAX request to fetch products based on the selected tag
+    // fetch(apiUrl)
+    //   .then(response => response.json())
+    //   .then(data => {
         
-        const products = data.products;
-        console.log('products',products);
-        displayProducts(products);
-      })
-      .catch(error => {
-        console.error('Error fetching products:', error);
-      });
+    //     const products = data.products;
+    //     console.log('products',products);
+    //     displayProducts(products);
+    //   })
+    //   .catch(error => {
+    //     console.error('Error fetching products:', error);
+    //   });
+    fetch(window.Shopify.routes.root + "search/suggest.json?q="+selectedTags+"&resources[type]=product&resources[options][fields]=tag")
+      .then((response) => response.json())
+      .then((suggestions) => {
+        const productSuggestions = suggestions.resources.results.products;
+        console.log('products',productSuggestions);
+        if (productSuggestions.length > 0) {
+          const firstProductSuggestion = productSuggestions[0];
+    
+          
+        }
+      }
+    );
+    
   }
 </script>
