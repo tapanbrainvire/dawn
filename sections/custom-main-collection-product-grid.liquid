@@ -82,19 +82,18 @@ $(document).ready(function () {
 			console.log(cresponse);
             const products = cresponse.products;
             displayProducts(products); 
-			// $.each(cresponse.collections, function (i) {
-			// 	var cdata = {};
-			// 	var handle = cresponse.collections[i].handle;
-			// 	var title = cresponse.collections[i].title;
+          
+			$.each(cresponse.collections, function (i) {
+				var cdata = {};
+				var tags = cresponse.collections[i].tags;
+				cdata.tags = tags.toLowerCase();
 
-			// 	cdata.handle = handle;
-			// 	cdata.title = title.toLowerCase();
+				collection_array.push(cdata);
+            });
 
-			// 	collection_array.push(cdata);
+            console.log('array tags',collection_array);
 
-               
-
-			// });
+          
 			// $('input[name="inhd_header_search"]').keyup(function () {
 			// 	$('.search__suggest-list').empty();
 			// 	var search_value = $(this).val();
