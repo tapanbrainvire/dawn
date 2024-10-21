@@ -87,7 +87,7 @@ $(document).ready(function () {
                 console.log('inside loop');
 				var cdata = {};
 				var tags = cresponse.products[i].tags;
-				cdata.tags = tags.toLowerCase();
+				cdata.tags = tags
 
 				collection_product_array.push(cdata);
             });
