@@ -80,6 +80,8 @@ $(document).ready(function () {
 		url: '/collections/{{ collection.handle }}/products.json?limit=9&page=1',
 		success: function (cresponse) {
 			console.log(cresponse);
+            const products = cresponse.products;
+            displayProducts(products)); 
 			// $.each(cresponse.collections, function (i) {
 			// 	var cdata = {};
 			// 	var handle = cresponse.collections[i].handle;
@@ -89,6 +91,8 @@ $(document).ready(function () {
 			// 	cdata.title = title.toLowerCase();
 
 			// 	collection_array.push(cdata);
+
+               
 
 			// });
 			// $('input[name="inhd_header_search"]').keyup(function () {
@@ -163,6 +167,24 @@ $(document).ready(function () {
  //      }); 
 	
 });  
+
+// Function to display products on the page
+  function displayProducts(products) {
+    const productContainer = document.getElementById('product-list');
+    productContainer.innerHTML = ''; // Clear previous products
+
+    products.forEach(product => {
+      const productHTML = `
+        <div class="product-item">
+          <img src="${product.images[0].src}" alt="${product.title}" />
+          <h2>${product.title}</h2>
+          <p>${product.variants[0].price}</p>
+          <a href="/products/${product.handle}">View Product</a>
+        </div>
+      `;
+      productContainer.innerHTML += productHTML;
+    });
+  }  
 </script>
 
 {% comment %}
