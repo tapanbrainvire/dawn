@@ -84,6 +84,7 @@ $(document).ready(function () {
             displayProducts(products); 
           
 			$.each(cresponse.products, function (i) {
+                console.log('inside loop');
 				var cdata = {};
 				var tags = cresponse.products[i].tags;
 				cdata.tags = tags.toLowerCase();
