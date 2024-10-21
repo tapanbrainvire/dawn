@@ -71,6 +71,103 @@
 }
 {% endschema %}
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>  
+$(document).ready(function () {
+    var collection_array = [];
+	$.ajax({
+		type: 'GET',
+		url: '/collections/{{ collection.handle }}/products.json?limit=9&page=1',
+		success: function (cresponse) {
+			console.log(cresponse);
+			// $.each(cresponse.collections, function (i) {
+			// 	var cdata = {};
+			// 	var handle = cresponse.collections[i].handle;
+			// 	var title = cresponse.collections[i].title;
+
+			// 	cdata.handle = handle;
+			// 	cdata.title = title.toLowerCase();
+
+			// 	collection_array.push(cdata);
+
+			// });
+			// $('input[name="inhd_header_search"]').keyup(function () {
+			// 	$('.search__suggest-list').empty();
+			// 	var search_value = $(this).val();
+			// 	var carray_count = 0;
+			// 	//  console.log(search_value);
+
+			// 	$.each(collection_array, function (i) {
+			// 		if (collection_array[i].title.includes(search_value)) {
+			// 			$('.search__suggest-list').append('<li class="search__suggest-list__item"><a href="collections/' + collection_array[i].handle + '">' + collection_array[i].title + '</a></li>');
+			// 			carray_count++;
+			// 		}
+			// 	});
+
+			// 	if (carray_count == 0) {
+			// 		$('.search__suggest-list').empty();
+			// 		$('.search__suggest-list').append('<li class="search__suggest-list__item">No Result</li>');
+			// 	}
+			// });
+		},
+		error: function (error) {
+			console.log("test" + JSON.stringify(error))
+			console.log("This Error: " + error);
+		}
+	});
+  
+  
+	// var product_array = [];
+	// $.ajax({
+	// 	type: 'GET',
+	// 	url: '/products.json?limit=250&page=1',
+	// 	success: function (response) {
+ //         // console.log(response);
+	// 		$.each(response.products, function (i) {
+	// 			var data = {};
+	// 			var handle = response.products[i].handle;
+	// 			var title = response.products[i].title;
+	// 			var src = response.products[i].images[0].src;
+	// 			var price = response.products[i].variants[0].price;
+
+	// 			data.handle = handle;
+	// 			data.title = title.toLowerCase();
+	// 			data.src = src;
+	// 			data.price = price;
+	// 			product_array.push(data);
+
+	// 		});
+	// 		$('input[name="inhd_header_search"]').keyup(function () {
+	// 			$('.search-product__grid').empty();
+	// 			var search_value = $(this).val();
+
+	// 			var parray_count = 0;
+	// 			$.each(product_array, function (i) {
+	// 				if (product_array[i].title.includes(search_value)) {
+	// 					$('.search-product__grid').append('<div class="search-product"><div class="search-product__figure"><a href="/products/' + product_array[i].handle + '"><img class="lazy entered loaded" data-src="' + product_array[i].src + '" alt="' + product_array[i].title + '" data-ll-status="loaded" src="' + product_array[i].src + '"></a></div><div class="search-product__caption"><h6 class="search-product__title">' + product_array[i].title + '<br>$' + product_array[i].price + '</h6></div></div>');
+	// 					parray_count++;
+	// 				}
+	// 			});
+
+	// 			if (parray_count == 0) {
+	// 				$('.search-product__grid').empty();
+	// 				$('.search-product__grid').append('<div class="search-product">No Result</div>');
+	// 			}
+
+	// 		});
+	// 	},
+	// 	error: function (error) {
+	// 		console.log("test" + JSON.stringify(error))
+	// 		console.log("This Error: " + error);
+	// 	}
+ //      }); 
+	
+});  
+</script>
+
+{% comment %}
+
+
 <script>
   // Function to fetch all products from a specific collection
   function fetchProductsByCollection() {
@@ -156,3 +253,5 @@
     
   }
 </script>
+
+{% endcomment %}
