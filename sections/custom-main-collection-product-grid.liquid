@@ -99,14 +99,14 @@ $(document).ready(function () {
 				//$('.search__suggest-list').empty();
 				var search_value = $(this).val();
 				var carray_count = 0;
-				  console.log(search_value);
+				//  console.log(search_value);
 
-				// $.each(collection_array, function (i) {
-				// 	if (collection_array[i].title.includes(search_value)) {
-				// 		$('.search__suggest-list').append('<li class="search__suggest-list__item"><a href="collections/' + collection_array[i].handle + '">' + collection_array[i].title + '</a></li>');
-				// 		carray_count++;
-				// 	}
-				// });
+				$.each(collection_product_array, function (i) {
+					if (collection_product_array[i].tags.includes(search_value)) {
+						//$('.search__suggest-list').append('<li class="search__suggest-list__item"><a href="collections/' + collection_array[i].handle + '">' + collection_array[i].title + '</a></li>');
+						carray_count++;
+					}
+				});
 
 				// if (carray_count == 0) {
 				// 	$('.search__suggest-list').empty();
