@@ -85,7 +85,7 @@ $(document).ready(function () {
           
 			$.each(cresponse.collections, function (i) {
 				var cdata = {};
-				var tags = cresponse.collections[i].tags;
+				var tags = cresponse.products[i].tags;
 				cdata.tags = tags.toLowerCase();
 
 				collection_array.push(cdata);
