@@ -77,7 +77,7 @@ $(document).ready(function () {
     var collection_array = [];
 	$.ajax({
 		type: 'GET',
-		url: '/collections/{{ collection.handle }}/products.json?limit=9&page=1',
+		url: '/collections/{{ collection.handle }}/products.json?limit=250&page=1',
 		success: function (cresponse) {
 			console.log(cresponse);
             const products = cresponse.products;
