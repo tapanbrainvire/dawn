@@ -74,7 +74,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>  
 $(document).ready(function () {
-    var product_array = [];
+    var collection_product_array = [];
 	$.ajax({
 		type: 'GET',
 		url: '/collections/{{ collection.handle }}/products.json?limit=250&page=1',
@@ -89,10 +89,10 @@ $(document).ready(function () {
 				var tags = cresponse.products[i].tags;
 				cdata.tags = tags.toLowerCase();
 
-				product_array.push(cdata);
+				collection_product_array.push(cdata);
             });
 
-            console.log('array tags',product_array);
+            console.log('array tags',collection_product_array);
 
           
 			// $('input[name="inhd_header_search"]').keyup(function () {
